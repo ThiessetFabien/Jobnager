@@ -36,7 +36,7 @@ Clarifier, faciliter et améliorer l'efficacité des chercheurs d'emploi en réd
 >- Archivage des curriculum vitae et des lettres de motivations
 >- CRUD du profil utilisateur avec notifications d'alerte et rappels de relance
 >- Lister les compétences de l'utilisateur
->- Analyse des candidatures (statistiques, taux de réponse, taux de correspondance entre les compétences du candidat et des attentes de l'offre)
+>- Analyse des candidatures
 >- Assistance par IA pour la génération de la préparation aux entretiens
 >- Automatisation et personnalisation des relances
 >- Intégration des plateformes de recrutement (LinkedIn, Indeed, Monster...)
@@ -80,12 +80,13 @@ Epuré, moderne, attrayant et accessible.
 ## 🎋 L'arborescence de l'application
 ### MVP
     |--Landing-page
-    |--Agreagation-offre
+    |--Emploi
     |--Mentions légales
     |--Sitemap
     |--Contact
     |---Login---|--Tableau-de-bord-candidatures
                 |--Profil
+                |--Assistance
 
 ### Evolutions
     |---Login---|--FAQ
@@ -96,40 +97,63 @@ Epuré, moderne, attrayant et accessible.
 
 ## ⏯️ Users stories
 ### MVP 
-|                | En tant que... | Je veux...                                         | Afin de ...                                             |
-| -------------- | -------------- | -------------------------------------------------- | ------------------------------------------------------- |
-| **MVP**        | Visiteur       | Voir la présentation de l'app                      | Savoir je peux faire avec l'application                 |
-|                |                | Créer un compte utilisateur                        | Sécuriser mes données                                   |
-|                |                | Rechercher une offre d'emploi                      | Trouver une offre qui m'intéresse                       |
-|                |                | Consulter l'intitulé de l'offre                    | Identifier l'offre                                      |
-|                |                | Consulter le type de contrat proposé               | Identifier la proposition de contrat de l'employeur     |
-|                |                | Consulter l'entreprise employeur                   | Identifier quel est l'entreprise employeuse             |
-|                |                | Consulter la localisation de l'entreprise          | Identifier la localité de l'entreprise                  |
-|                |                | Être inviter à créer un profil                     | Enregistrer mes conditions de recherche                 |
-|                |                | Filtrer les offres                                 | Cibler les offres qui me concerne                       |
-|                |                | Lire le plan de l'application                      | M'orienter efficament dans l'application                |
-|                |                | Consulter les mentions légales                     | Rassurer et identifier l'équipe de développement        |
-|                |                | Contacter l'équipe de développement                | Faire un retour par un mail à l'équipe de développement |
-| **Evolutions** |                |  
-| **MVP**        | Membre         | Me connecter                                       | Consulter/Modifier mes données                          |
-|                |                | Me déconnecter                                     | Etre discret                                            |
-|                |                | Sélectionner une/des offres                        | Choisir des offres à postuler                           |
-|                |                | Enregistrer la/les offres sélectionnées            | Consulter la/les offres à un autre moment               |
-|                |                | Contacter un recruteur (mail, téléphone, réseaux)  | Echanger au sujet d'une entreprise/offre                |
-|                |                | Modifier l'état de la candidature                  | Ajuster le statut de la candidature                     |
-|                |                | Retenir les mots clés d'un offre                   | Connaître les attentes du recruteur                     |
-|                |                | Retenir les compétences recherchées                | Positionner par rapport à l'offre d'emploi              |
-|                |                | Ajouter des notes à une candidature                | Ajuster les mots clés de l'offre                        |
-| **Evolutions** |                | Définir mon taux de compétences visavis de l'offre | Démarquer des autres candidats                          |
-|                |                | Recevoir des suggestions d'offres                  | Postuler rapidement                                     |
-|                |                | Identifier les modifications du CV & LM            | Orienter mon discours lors de l'entretien               | 
-|                |                | Archiver les fichiers des candidatures             | Prendre rapidement connaissance des modifications       |
+|                | En tant que... | Je veux...                                                      | Afin de ...                                               |
+| -------------- | -------------- | --------------------------------------------------------------- | --------------------------------------------------------- |
+| **MVP**        | Visiteur       | Voir la présentation de l'app                                   | Savoir je peux faire avec l'application                   |
+|                |                | Créer un compte utilisateur                                     | Sécuriser mes données                                     |
+|                |                | Rechercher une offre d'emploi                                   | Trouver une offre qui m'intéresse                         |
+|                |                | Consulter l'intitulé de l'offre                                 | Identifier l'offre                                        |
+|                |                | Consulter le type de contrat proposé                            | Identifier la proposition de contrat de l'employeur       |
+|                |                | Consulter l'entreprise employeur                                | Identifier quel est l'entreprise employeuse               |
+|                |                | Consulter la localisation de l'entreprise                       | Identifier la localité de l'entreprise                    |
+|                |                | Être inviter à créer un profil                                  | Enregistrer mes conditions de recherche                   |
+|                |                | Filtrer les offres                                              | Cibler les offres qui me concerne                         |
+|                |                | Lire le plan de l'application                                   | M'orienter efficament dans l'application                  |
+|                |                | Consulter les mentions légales                                  | Rassurer et identifier l'équipe de développement          |
+|                |                | Contacter l'équipe de développement                             | Faire un retour par un mail à l'équipe de développement   |
+| **Evolutions** |                |                                                                 |                                                           |
+|                | Visiteur       | Me localiser grâce au device                                    | Gagner du temps dans la saisie du filtre                  |
+| **MVP**        | Membre         | Me connecter                                                    | Consulter/Modifier mes données                            |
+|                |                | Se souvenir de mon identifiant                                  | Saisir uniquement le mot de passe                         |
+|                |                | Pouvoir réinitialiser identifiant/mot de passe                  | Connecter en cas d'oubli                                  |
+|                |                | Me déconnecter                                                  | Etre discret                                              |
+|                |                | Sélectionner une/des offres                                     | Choisir des offres à postuler                             |
+|                |                | Enregistrer la/les offres sélectionnées                         | Retenir la/les offres ciblées                             |
+|                |                | Consulter les offres enregistrées                               | Lire la/les offres ciblées                                |
+|                |                | Contacter un recruteur (mail, téléphone, réseaux)               | Echanger au sujet d'une entreprise/offre                  |
+|                |                | Modifier l'état de la candidature                               | Ajuster le statut de la candidature                       |
+|                |                | Retenir les mots clés d'un offre                                | Connaître les attentes du recruteur                       |
+|                |                | Retenir les compétences recherchées                             | Positionner par rapport à l'offre d'emploi                |
+|                |                | Ajouter des notes à une candidature                             | Ajuster les mots clés de l'offre                          |
+| **Evolutions** | Membre         | Définir mon taux de compétences visavis de l'offre              | Démarquer des autres candidats                            |
+|                |                | Recevoir des suggestions d'offres                               | Postuler rapidement                                       |
+|                |                | Identifier la compatibilité en l'offre et le profil utilisateur | Orienter le discours lors de l'entretien                  | 
+|                |                | Archiver les fichiers des candidatures                          | Prendre rapidement connaissance des modifications         | 
+|                |                | Configurer les alertes emplois que je souhaite                  | Prévenu rapidement des nouvelles opportunités             |
+|                |                | Définir la période de rappel par défaut                         | Modifier les rappels (annulation, retardement)            |
+|                |                | Lister les hards kills et soft skills                           | Préciser le profil utilisateur                            |
+|                |                | Analyse l'historique de candidature                             | Connaitre le taux de réponse et le taux de correspondace  |
+|                |                | Identifier les mots clés de l'offre                             | Orienter le profil utilisateur                            |
+|                |                | Pré-remplir la note de préparation à l'entretien                | Pouvoir se focaliser sur les axes majeurs de négociations |
+|                |                | Pré-remplir la relance à l'aide de la préparation d'entretien   | Prép arer le mail à envoyer                               |
+|                |                | Définir la fréquence de relance que me convient                 | Préciser la fréquence des relances                        |
+|                |                | Ajuster la fréquence des relances pour cette offre              | Ajuster cette relance à le planning                       |
+|                |                | Enregistrer le compte à l'aide d'un compte google et linkedin   | Gagner du temps à la connexion                            |
+|                |                | Consulter la FAQ                                                | Trouver une réponse à une question                        |
+|                |                | Poser ma question à un chatbot                                  | Récupérer la réponse à ma question rapidement             |
+|                |                | Consulter les conseils en méthodologie, processus               | Optimiser la recherche d'emploi                           |
+|                |                | Envoyer un message instantanné au staff de l'application        | Faire un feedback                                         |
+|                |                | Créer/modifier un curriculum vitae                              | Créer/retravailler mon curriculum vitae                   |
+|                |                | Créer/modifier ma lettre de motivation                          | Créer/modifier ma lettre de motivation                    |
+
 
 ---
 ## 🛣️ Routes prévues
-| Endpoint | Code HTTP |
-| -------- | --------- |
-| /        |           |
+| Endpoint          | Code HTTP |
+| ----------------- | --------- |
+| /                 |           |
+| /emploi           |           |
+| /mentions-legales |           |
 
 ---
 ## 👨🏼‍🤝‍👨🏽 Rôles
