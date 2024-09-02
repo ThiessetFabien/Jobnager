@@ -150,6 +150,7 @@ Epuré, moderne, attrayant et accessible.
 
 ---
 ## 🛣️ Routes prévues
+<<<<<<< HEAD
 | URL                | Méthode HTTP | Code Succes          | Code Erreur                                      |
 | ------------------ | ------------ | -------------------- | ------------------------------------------------ |
 | /                  | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
@@ -175,6 +176,34 @@ Epuré, moderne, attrayant et accessible.
 | /lettre-motivation | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
 |                    | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
 | *                  | GET          |                      | 404 Not Found, 500 Error server                  |
+=======
+| URL              | Méthode HTTP | Code Succes          | Code Erreur                                      |
+| ---------------- | ------------ | -------------------- | ------------------------------------------------ |
+| /                | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+| /login           | POST         | 200 ok               | 400 Bad request, 404 Not Found, 500 Error server |
+| /signin          | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+| /offres          | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+|                  | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+|                  | DELETE       | 200 ok, 202 Accepted | 400 Bad request, 404 Not Found, 500 Error server |
+| /mentions-legales| GET          | 200 ok               | 404 Not Found, 500 Error server                  | 
+| /plan-site       | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+| /contact         | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+|                  | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+| /candidatures    | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+|                  | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+| /profil          | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+|                  | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+| /sav             | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+|                  | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+| /faq             | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+| /methodologie    | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+| /make-cv         | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+|                  | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+| /make-motivation | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+|                  | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+| *                | GET          |                      | 404 Not Found, 500 Error server                  |
+
+>>>>>>> b5d08f0b79bb250a602789838a93ae296e383dfc
 ---
 ## 👨🏼‍🤝‍👨🏽 Rôles
 - Christian - Initiative du projet
