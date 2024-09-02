@@ -79,21 +79,22 @@ Epuré, moderne, attrayant et accessible.
 ---
 ## 🎋 L'arborescence de l'application
 ### MVP
-    |--Landing-page
-    |--Emploi
-    |--Mentions légales
-    |--Sitemap
-    |--Contact
-    |---Login---|--Tableau-de-bord-candidatures
-                |--Profil
-                |--Assistance
+    Landing-page
+        |--Emploi
+        |--Mentions légales
+        |--Sitemap
+        |--Contact
+        |--Tableau-de-bord-candidatures
+        |--Profil
+        |--Assistance
 
 ### Evolutions
-    |---Login---|--FAQ
-                |--Process-&-Methodologie
-                |--Talk-with-developer
-                |--Make-CV
-                |--Make-motivation-letter
+    Landing-page
+        |--FAQ
+        |--Process-&-Methodologie
+        |--Talk-with-developer
+        |--Make-CV
+        |--Make-motivation-letter
 
 ## ⏯️ Users stories
 ### MVP 
@@ -149,11 +150,31 @@ Epuré, moderne, attrayant et accessible.
 
 ---
 ## 🛣️ Routes prévues
-| Endpoint          | Code HTTP |
-| ----------------- | --------- |
-| /                 |           |
-| /emploi           |           |
-| /mentions-legales |           |
+| URL              | Méthode HTTP | Code Succes          | Code Erreur                                      |
+| ---------------- | ------------ | -------------------- | ------------------------------------------------ |
+| /                | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+| /login           | POST         | 200 ok               | 400 Bad request, 404 Not Found, 500 Error server |
+| /signin          | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+| /offres          | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+|                  | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+|                  | DELETE       | 200 ok, 202 Accepted | 400 Bad request, 404 Not Found, 500 Error server |
+| /mentions-legales| GET          | 200 ok               | 404 Not Found, 500 Error server                  | 
+| /plan-site       | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+| /contact         | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+|                  | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+| /candidatures    | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+|                  | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+| /profil          | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+|                  | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+| /sav             | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+|                  | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+| /faq             | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+| /methodologie    | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+| /make-cv         | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+|                  | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+| /make-motivation | GET          | 200 ok               | 404 Not Found, 500 Error server                  |
+|                  | POST         | 200 ok, 201 Created  | 400 Bad request, 404 Not Found, 500 Error server |
+| *                | GET          |                      | 404 Not Found, 500 Error server                  |
 
 ---
 ## 👨🏼‍🤝‍👨🏽 Rôles
